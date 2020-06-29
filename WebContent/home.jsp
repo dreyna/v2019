@@ -21,13 +21,16 @@
         <link rel="shortcut icon" type="image/x-icon" href="recursos/img/logo.ico">
         <%@include file="../../WEB-INF/template/header.jspf" %>
         <script type="text/javascript">
-        	window.onbeforeunload = function(e) {
-        		location.href = document.referrer; return false;
-        		history.go(-1);
-        	};
+        	if(history.forward(1)){
+        	    location.replace( history.forward(1) );
+        	    history.replaceState()
+        	  }
+        	function NoBack(){
+        		history.go(1)
+        		}
         </script>
     </head>
-    <body>
+    <body OnLoad="NoBack();">
         <div class="container">
 
             <!-- Static navbar -->

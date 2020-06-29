@@ -64,7 +64,7 @@ static PersonaDao dd = new PersonalDaoImp();
     }
     static void user(){
      HashMap<String, Object> data = new HashMap<>();
-     data = ud.validar("emilyc", "123");
+     data = ud.validar("dreyna", "12345");
      System.out.println(data);
         System.out.println(data.size());   
      /*
